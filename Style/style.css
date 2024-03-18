@@ -3,19 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Preconnet, sans-serif;
-
 }
-
 
 body {
   min-height: 100vh;
   background-color: #f5fdff9e;
   animation: animasi 1s ease-in-out;
-
 }
 
 /* NAVBAR */
-header {
+header nav {
   position: fixed;
   width: 100%;
   min-height: 30px;
@@ -28,33 +25,29 @@ header {
   z-index: 99999;
 }
 
-header .logo img {
-height: 35px;
+header nav .logo img {
+  height: 35px;
 }
 
-
-
-header ul {
+header nav .menu ul {
   position: relative;
   display: inline-block;
   display: flex;
-justify-content: flex-end;
+  justify-content: flex-end;
 }
 
-header ul li {
+header nav .menu ul li {
   position: relative;
   list-style: none;
   font-size: 14px;
-
-  
 }
 
-header ul li b {
+header nav .menu ul li b {
   margin-left: 10px;
   margin-top: -5px;
 }
 
-header ul li a {
+header nav .menu ul li a {
   color: black;
   padding: 15px 20px;
   text-decoration: none;
@@ -62,11 +55,11 @@ header ul li a {
   justify-content: space-between;
 }
 
-header ul li a:hover {
+header nav .menu ul li a:hover {
   background-color: rgba(18, 175, 184, 0.381);
 }
 
-header ul li ul {
+header nav .menu ul li ul {
   position: absolute;
   left: 0;
   width: 200px;
@@ -76,46 +69,39 @@ header ul li ul {
   box-shadow: 0px 2px 11px 0px rgba(153, 149, 149, 1);
 }
 
-header ul li:hover ul {
+header nav .menu ul li:hover ul {
   display: block;
 }
 
-header ul li ul li {
+header nav .menu ul li ul li {
   position: relative;
   width: 100%;
 }
 
-
 /* JUMBOTRON */
-#home .jumbotron {
-  padding: 0 100px 0 100px;
+header .jumbotron {
+  padding: 100px 100px 0 100px;
 }
 
-#home .jumbotron .title {
+header .jumbotron .title {
   display: flex;
   height: 530px;
   font-size: 20px;
   text-align: left;
 }
 
-#home .jumbotron .title-content2 {
+header .jumbotron .title-content2 {
   display: flex;
   flex-direction: column;
   margin: 150px auto;
 }
 
-#home .jumbotron h1 {
+header .jumbotron h1 {
   color: #213c8f;
 }
 
 #home #konten {
   background-color: #f5fdff9e;
-}
-
-body main {
-  padding-top: 100px;
-
-
 }
 
 /* ABOUT */
@@ -159,25 +145,22 @@ body main {
   box-shadow: 0px 0px 32px -26px rgba(0, 0, 0, 1);
   padding: 20px;
   margin: 15px;
-  
-
 }
 
 #home section #unggul.animasiUnggul ul li {
-    animation: animasi 1s ease-in-out;
+  animation: animasi 1s ease-in-out;
 }
 
 @keyframes animasi {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 
 #home section #unggul ul li h4 {
   font-size: 12px;
@@ -187,7 +170,6 @@ body main {
 #home section #unggul ul li img {
   margin-bottom: 7px;
 }
-
 
 /* TEKNISI */
 #home .konten3 #teknisi {
@@ -293,13 +275,14 @@ button {
 }
 
 button:hover {
-  background-color: #0352a1; 
+  background-color: #0352a1;
 }
 
 .bio {
   display: flex;
   flex-direction: column;
 
+  height: 100%;
   align-items: center;
   background-color: #6689cb;
   padding: 30px;
@@ -326,7 +309,6 @@ button:hover {
   padding: 7px 13px;
 }
 
-
 /* FOOTER */
 footer {
   background-color: #19315d;
@@ -351,7 +333,6 @@ footer .footer ul li ul li a {
   color: white;
 }
 
-
 footer .credit {
   font-size: 12px;
   padding: 10px;
@@ -375,26 +356,27 @@ footer .credit {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 /* <===== Sevice Page =====> */
 
 /* Title */
-main .judul h1 {
+header .judul {
+  padding: 150px 20px 50px;
+}
+header .judul h1 {
   text-align: center;
-  margin: 30px;
   color: #213c8f;
 }
 
-main .judul p {
+header .judul p {
   font-size: 15px;
   padding: 20px;
   max-width: 700px;
   color: #28314e;
   text-align: center;
-  margin: -10px auto 30px;
+  margin: auto;
 }
 
 /* Form */
@@ -402,7 +384,6 @@ main .service-form {
   margin: auto;
   width: 90%;
 }
-
 
 main .service-form .form {
   display: flex;
@@ -421,13 +402,12 @@ main .service-form .form select {
   width: 100px;
 }
 
-main .service-form .form #message, 
+main .service-form .form #message,
 main .service-form .form input {
   width: 95%;
   margin: auto;
   margin-bottom: 20px;
   background-color: white;
-
 }
 
 input[type="file"] {
@@ -437,41 +417,36 @@ input[type="file"] {
 main .service-form .form button {
   width: 100px;
   margin: 10px auto;
-  box-shadow:#00000053 0px 0px 14px;
+  box-shadow: #00000053 0px 0px 14px;
 }
 
 /* RESPONSIIVE */
 @media screen and (max-width: 1000px) {
-  header {
-    padding: 10px 20px;
-    
-  }
   header nav {
+    padding: 10px 20px;
+  }
+  header nav .menu {
     position: absolute;
-    width: 100%;
+    width: 90%;
     top: 66px;
-    left: 0;
-    background-color: white;
+    right: -150px;
     display: none;
   }
-  header.active{
+  header nav.active {
     animation: animasi 0s ease-in-out;
-
   }
-  header.active nav {
+  header nav.active .menu {
     display: initial;
   }
-  header nav ul {
+  header nav .menu ul {
     animation: animasi 0.3s ease-in-out;
-
   }
-  header nav ul li {
+  header nav .menu ul li {
     width: 100%;
   }
-  header nav ul li ul {
+  header nav .menu ul li ul {
     position: relative;
     width: 100%;
-
   }
 
   .menuToggle {
@@ -493,7 +468,7 @@ main .service-form .form button {
     background-color: black;
     box-shadow: 0 24px black;
   }
-  
+
   .menuToggle::after {
     content: "";
     position: absolute;
@@ -504,30 +479,30 @@ main .service-form .form button {
     transform: translateY(12px);
   }
 
-  header.active .menuToggle::before {
+  nav.active .menuToggle::before {
     margin: 20px;
     transform: rotate(45deg);
     box-shadow: 0 0;
   }
 
-  header.active .menuToggle::after {
+  nav.active .menuToggle::after {
     margin: 20px;
     transform: rotate(315deg);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  /* HEADER */
-  header {
+  /* HEADER nav */
+  header nav {
     padding: 5px 20px;
     min-height: 20px;
   }
 
-  header .logo {
+  header nav .logo {
     font-size: 0.1em;
   }
 
-  header ul {
+  header nav ul {
     flex-direction: column;
     align-items: flex-start;
     width: 60%;
@@ -541,57 +516,57 @@ main .service-form .form button {
     overflow-y: auto;
   }
 
-  header .menuToggle {
+  header nav .menuToggle {
     display: block;
     cursor: pointer;
   }
 
-  header ul li {
+  header nav ul li {
     width: 100%;
     font-size: 13px;
   }
 
-  header ul li a {
+  header nav ul li a {
     padding: 15px 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  header .menuToggle.active + ul {
+  header nav .menuToggle.active + ul {
     display: block;
   }
 
   /* JUMBOTRON */
-  #home .jumbotron {
-    padding: 50px;
+  header .jumbotron {
+    padding: 120px 50px 75px 50px;
   }
 
-  #home .jumbotron .title {
+  header .jumbotron .title {
     flex-direction: column;
     height: auto;
     align-items: center;
     text-align: center;
   }
 
-  #home .jumbotron .title-content1 {
+  header .jumbotron .title-content1 {
     margin-bottom: 20px;
   }
 
-  #home .jumbotron .title-content2 {
+  header .jumbotron .title-content2 {
     margin: 20px 0;
   }
 
-  #home .jumbotron h1 {
+  header .jumbotron h1 {
     font-size: 30px;
     margin-bottom: 5px;
     text-align: left;
   }
 
-  #home .jumbotron p {
+  header .jumbotron p {
     font-size: 15px;
     text-align: left;
   }
 
-  #home .jumbotron img {
+  header .jumbotron img {
     margin-top: 50px;
     max-width: 100%;
     height: auto;
@@ -600,7 +575,7 @@ main .service-form .form button {
   /* ABOUT */
 
   #home section #tentang .ket h2,
-  #home section  #unggul h2{
+  #home section #unggul h2 {
     font-size: 23px;
     margin-bottom: -20px;
   }
@@ -633,8 +608,9 @@ main .service-form .form button {
     margin-bottom: 10px;
   }
 
-  .bio {
-    width: 100%;
+  aside .bio {
+    width: 90%;
+    margin: auto;
     box-shadow: none;
   }
 

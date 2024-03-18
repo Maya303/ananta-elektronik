@@ -11,9 +11,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // navbar
 const menuToggle = document.querySelector('.menuToggle');
-const header = document.querySelector('header');
+const nav = document.querySelector('nav');
 menuToggle.addEventListener('click', function () {
-  header.classList.toggle('active');
+  nav.classList.toggle('active');
 });
 
 // animasi
